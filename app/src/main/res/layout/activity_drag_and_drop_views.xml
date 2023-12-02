@@ -66,6 +66,7 @@
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
+                android:background="@drawable/red_border"
                  />
 
             <ImageView
@@ -73,6 +74,7 @@
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
+                android:background="@drawable/red_border"
                  />
 
             <ImageView
@@ -80,6 +82,7 @@
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
+                android:background="@drawable/red_border"
                  />
 
             <ImageView
@@ -87,6 +90,7 @@
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
+                android:background="@drawable/red_border"
                  />
 
             <ImageView
@@ -94,6 +98,7 @@
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
+                android:background="@drawable/red_border"
                 />
 
         </LinearLayout>
