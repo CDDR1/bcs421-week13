@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipDescription
 import android.graphics.Canvas
 import android.graphics.Point
+import android.graphics.drawable.AnimationDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,6 +17,7 @@ import edu.farmingdale.alrajab.dragdropanimation_sc.databinding.ActivityDragAndD
 
 class DragAndDropViews : AppCompatActivity() {
     lateinit var binding: ActivityDragAndDropViewsBinding
+    private lateinit var faceAnimation: AnimationDrawable
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDragAndDropViewsBinding.inflate(layoutInflater)
@@ -31,6 +33,13 @@ class DragAndDropViews : AppCompatActivity() {
         binding.downMoveBtn.setOnLongClickListener(onLongClickListener)
         binding.forwardMoveBtn.setOnLongClickListener(onLongClickListener)
         binding.backMoveBtn.setOnLongClickListener(onLongClickListener)
+
+        val faceImage = findViewById<ImageView>(R.id.faces).apply {
+            setBackgroundResource(R.drawable.animation)
+            faceAnimation = background as AnimationDrawable
+        }
+
+        faceImage.setOnClickListener({ faceAnimation.start() })
     }
 
 

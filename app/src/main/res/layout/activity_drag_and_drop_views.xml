@@ -112,6 +112,10 @@
         android:layout_weight="10"
         android:background="@color/design_default_color_secondary">
 
+        <ImageView
+            android:id="@+id/faces"
+            android:layout_height="200dp"
+            android:layout_width="200dp" />
 
     </LinearLayout>
 
