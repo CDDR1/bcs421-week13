@@ -62,12 +62,15 @@ class DragAndDropViews : AppCompatActivity() {
         (view as? ImageView)?.let {
             when (dragEvent.action) {
                 DragEvent.ACTION_DRAG_STARTED -> {
+                    view.setBackgroundResource(R.drawable.red_border)
                     return@OnDragListener true
                 }
                 DragEvent.ACTION_DRAG_ENTERED -> {
+                    view.setBackgroundResource(R.drawable.white_border)
                     return@OnDragListener true
                 }
                 DragEvent.ACTION_DRAG_EXITED-> {
+                    view.setBackgroundResource(R.drawable.red_border)
                     return@OnDragListener true
                 }
                 // No need to handle this for our use case.
@@ -89,6 +92,8 @@ class DragAndDropViews : AppCompatActivity() {
                     return@OnDragListener true
                 }
                 DragEvent.ACTION_DRAG_ENDED -> {
+                    // Reset the border color to red when drag ends
+                    view.setBackgroundResource(R.drawable.red_border)
                     return@OnDragListener true
                 }
                 else -> return@OnDragListener false
