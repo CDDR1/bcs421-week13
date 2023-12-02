@@ -23,12 +23,14 @@ class DragAndDropViews : AppCompatActivity() {
         setContentView(binding.root)
         binding.holder01.setOnDragListener(arrowDragListener)
         binding.holder02.setOnDragListener(arrowDragListener)
-
+        binding.holder03.setOnDragListener(arrowDragListener)
+        binding.holder04.setOnDragListener(arrowDragListener)
+        binding.holder05.setOnDragListener(arrowDragListener)
 
         binding.upMoveBtn.setOnLongClickListener(onLongClickListener)
-
-
-
+        binding.downMoveBtn.setOnLongClickListener(onLongClickListener)
+        binding.forwardMoveBtn.setOnLongClickListener(onLongClickListener)
+        binding.backMoveBtn.setOnLongClickListener(onLongClickListener)
     }
 
 
@@ -78,9 +80,12 @@ class DragAndDropViews : AppCompatActivity() {
                     val item: ClipData.Item = dragEvent.clipData.getItemAt(0)
                     val lbl = item.text.toString()
                     Log.d("BCCCCCCCCCCC", "NOTHING > >  " + lbl)
-                   when(lbl.toString()){
-                       "UP"->view.setImageResource( R.drawable.ic_baseline_arrow_upward_24)
-                   }
+                    when(lbl.toString()){
+                        "UP"->view.setImageResource( R.drawable.ic_baseline_arrow_upward_24)
+                        "DOWN"->view.setImageResource( R.drawable.ic_baseline_arrow_downward_24)
+                        "FORWARD"->view.setImageResource( R.drawable.ic_baseline_arrow_forward_24)
+                        "BACK"->view.setImageResource( R.drawable.ic_baseline_arrow_back_24)
+                    }
                     return@OnDragListener true
                 }
                 DragEvent.ACTION_DRAG_ENDED -> {
