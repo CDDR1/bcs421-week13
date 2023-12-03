@@ -39,7 +39,8 @@ class DragAndDropViews : AppCompatActivity() {
             faceAnimation = background as AnimationDrawable
         }
 
-        faceImage.setOnClickListener({ faceAnimation.start() })
+        val animateBtn = findViewById<Button>(R.id.animateBtn)
+        animateBtn.setOnClickListener(( {faceAnimation.start()} ))
     }
 
 

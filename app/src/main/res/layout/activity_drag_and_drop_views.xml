@@ -112,6 +112,13 @@
         android:layout_weight="10"
         android:background="@color/design_default_color_secondary">
 
+        <Button
+            android:id="@+id/animateBtn"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:text="Animate!"
+            />
+
         <ImageView
             android:id="@+id/faces"
             android:layout_height="200dp"
